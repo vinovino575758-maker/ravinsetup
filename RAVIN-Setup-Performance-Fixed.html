@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jasa instalasi & setup software untuk pelajar SMK. Mulai Rp15K. Pilih software, isi kebutuhan, lalu chat WhatsApp.">
+  <meta name="theme-color" content="#f8f9fb">
+  <title>Jasa Setup Laptop Pelajar SMK | RAVIN Setup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap">
+  <style>
+
+    :root{
+      --bg:#f8f9fb;
+      --surface:#ffffff;
+      --ink:#101828;
+      --muted:#667085;
+      --line:#e7eaf0;
+      --blue:#1769ff;
+      --blue-dark:#0e4fc7;
+      --lime:#dfff62;
+      --navy:#0b1730;
+      --radius:22px;
+      --shadow:0 12px 35px rgba(16,24,40,.07);
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.55;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button,a{ -webkit-tap-highlight-color:transparent }
+    :focus-visible{outline:3px solid rgba(23,105,255,.35);outline-offset:3px}
+
+    .container{width:min(calc(100% - 32px),var(--max));margin-inline:auto}
+    .section{padding:82px 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--blue);margin-bottom:12px
+    }
+    .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue)}
+    h1,h2,h3{font-family:Manrope,Inter,sans-serif;line-height:1.08;letter-spacing:-.035em;margin:0}
+    h1{font-size:clamp(3rem,10vw,5.8rem);max-width:780px}
+    h2{font-size:clamp(2rem,5vw,3.25rem);max-width:720px}
+    h3{font-size:1.15rem}
+    p{margin:0;color:var(--muted)}
+    .lead{font-size:1.05rem;max-width:610px}
+    .section-head{margin-bottom:34px}
+    .section-head p{margin-top:14px;max-width:650px}
+
+    .nav{
+      position:sticky;top:0;z-index:50;
+      background:rgba(248,249,251,.72);
+      backdrop-filter:blur(10px) saturate(115%);
+      -webkit-backdrop-filter:blur(10px) saturate(115%);
+      border-bottom:1px solid rgba(231,234,240,.58);
+      transition:.2s ease;
+    }
+    .nav.scrolled{
+      background:rgba(255,255,255,.68);
+      border-color:rgba(214,220,230,.72);
+      box-shadow:0 10px 30px rgba(16,24,40,.07)
+    }
+    .nav-inner{height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{font-family:Manrope;font-weight:800;letter-spacing:-.04em;font-size:1.08rem}
+    .brand span{color:var(--blue)}
+    .nav-links{display:none;gap:26px;font-size:.88rem;font-weight:600;color:#475467}
+    .nav-links a:hover{color:var(--ink)}
+    .nav-cta{padding:10px 15px!important;font-size:.82rem!important}
+    .menu-btn{display:none;border:0;background:transparent;font-size:1.2rem}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      min-height:48px;padding:13px 19px;border-radius:14px;
+      border:1px solid transparent;font-weight:750;font-size:.92rem;
+      cursor:pointer;transition:transform .18s ease,background .18s ease,border .18s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--blue);color:#fff}
+    .btn-primary:hover{background:var(--blue-dark)}
+    .btn-secondary{background:#fff;border-color:var(--line);color:var(--ink)}
+    .btn-secondary:hover{border-color:#cfd5df}
+    .btn-dark{background:var(--navy);color:#fff}
+    .btn-full{width:100%}
+
+    .hero{padding:66px 0 72px;overflow:hidden}
+    .hero-grid{display:grid;gap:44px;align-items:center}
+    .hero-copy .lead{margin-top:22px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .micro{font-size:.78rem;color:#7a8494;margin-top:13px}
+    .hero-visual{
+      position:relative;min-height:330px;
+      display:grid;place-items:center;
+    }
+    .laptop{
+      width:min(100%,520px);aspect-ratio:16/10;position:relative;
+      background:#172033;border:8px solid #222c3f;border-radius:18px 18px 10px 10px;
+      box-shadow:0 24px 50px rgba(11,23,48,.18);
+      transform:rotate(-2deg);
+    }
+    .screen{
+      position:absolute;inset:8px;background:#eef3fb;border-radius:8px;
+      overflow:hidden;padding:18px;
+    }
+    .screen-top{height:9px;width:35%;background:#d8dfeb;border-radius:9px;margin-bottom:15px}
+    .screen-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;height:calc(100% - 24px)}
+    .folder-panel,.task-panel{background:#fff;border:1px solid #e1e6ef;border-radius:12px;padding:12px}
+    .mini-title{font-size:10px;font-weight:800;color:#3d4a5e;margin-bottom:9px}
+    .folder{height:29px;border-radius:7px;background:#f1f4f8;margin-bottom:7px;padding:7px 8px;font-size:8px;color:#6d7788}
+    .folder.active{background:#e6efff;color:#1559cf}
+    .task{display:flex;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #edf0f5;font-size:8px;color:#657084}
+    .check{width:13px;height:13px;border-radius:4px;background:#dff0ff;display:grid;place-items:center;color:#1769ff;font-size:8px}
+    .laptop-base{
+      position:absolute;left:-7%;width:114%;height:18px;bottom:-20px;
+      background:#c7ced9;border-radius:0 0 22px 22px;
+      box-shadow:0 8px 15px rgba(11,23,48,.13)
+    }
+    .float{
+      position:absolute;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);
+      border-radius:15px;padding:11px 13px;font-size:.74rem;font-weight:750;
+    }
+    .float.one{left:0;top:16%;transform:rotate(-4deg)}
+    .float.two{right:0;bottom:13%;transform:rotate(3deg)}
+    .float .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--lime);margin-right:7px}
+
+    .problem{background:#fff}
+    .problem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:28px 0}
+    .problem-card{border:1px solid var(--line);border-radius:18px;padding:20px;background:#fff}
+    .problem-card strong{display:block;font-size:.98rem;margin-bottom:5px}
+    .problem-card p{font-size:.84rem}
+    .problem-number{font-family:Manrope;font-size:.75rem;color:#98a2b3;font-weight:800;margin-bottom:25px}
+
+    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .service-card{padding:24px;border:1px solid var(--line);background:#fff;border-radius:20px}
+    .service-card h3{margin-bottom:8px}
+    .service-card p{font-size:.9rem}
+    .service-mark{font-size:.75rem;color:var(--blue);font-weight:800;margin-bottom:24px}
+    .note{margin-top:18px;padding:14px 16px;border-radius:13px;background:#f0f5ff;color:#44526a;font-size:.78rem}
+
+    .pricing{background:#fff}
+    .pricing-grid{display:grid;gap:14px}
+    .price-card{
+      position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px;
+      transition:.2s ease;display:flex;flex-direction:column;
+    }
+    .price-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .price-card.popular{border:2px solid var(--blue);box-shadow:0 12px 40px rgba(23,105,255,.12)}
+    .badge{
+      position:absolute;right:18px;top:18px;background:var(--lime);color:#1d2600;
+      padding:6px 9px;border-radius:999px;font-size:.68rem;font-weight:850
+    }
+    .price{font-family:Manrope;font-size:2.1rem;font-weight:800;letter-spacing:-.05em;margin:13px 0 17px}
+    .price small{font-family:Inter;font-size:.76rem;color:#8a93a1;font-weight:600;letter-spacing:0}
+    .features{list-style:none;padding:0;margin:0 0 22px}
+    .features li{display:flex;gap:9px;padding:7px 0;font-size:.85rem;color:#475467}
+    .features li::before{content:"✓";font-weight:800;color:var(--blue)}
+    .pricing-note{text-align:center;margin-top:18px;font-size:.77rem;color:#7a8494}
+
+    .addon{padding-top:10px}
+    .addon-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:25px}
+    .addon-item{padding:15px;border:1px solid var(--line);border-radius:15px;background:#fff;display:flex;justify-content:space-between;gap:10px;font-size:.82rem}
+    .addon-item strong{white-space:nowrap;color:var(--ink)}
+
+
+    .steps{display:grid;gap:0;border-top:1px solid var(--line)}
+    .step{display:grid;grid-template-columns:58px 1fr;gap:17px;padding:23px 0;border-bottom:1px solid var(--line)}
+    .step-no{font-family:Manrope;font-weight:800;color:var(--blue)}
+    .step h3{margin-bottom:5px}
+    .step p{font-size:.88rem}
+
+    .trust{background:#f0f5ff}
+    .trust-grid{display:grid;gap:24px}
+    .checklist{display:grid;gap:10px}
+    .checkitem{display:flex;align-items:center;gap:12px;padding:15px 17px;border-radius:15px;background:#fff;border:1px solid #dfe7f5;font-size:.88rem}
+    .checkicon{width:23px;height:23px;display:grid;place-items:center;border-radius:7px;background:#e7f0ff;color:var(--blue);font-weight:850;font-size:.75rem}
+
+    .faq-list{border-top:1px solid var(--line)}
+    details{border-bottom:1px solid var(--line);padding:18px 0}
+    summary{cursor:pointer;list-style:none;font-weight:700;display:flex;justify-content:space-between;gap:20px}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";font-size:1.2rem;color:#98a2b3}
+    details[open] summary::after{content:"−"}
+    details p{font-size:.88rem;padding-top:10px;max-width:760px}
+
+    .final{padding:88px 0}
+    .final-box{background:#e8efff;border-radius:30px;padding:42px 26px;text-align:center}
+    .final-box h2{margin-inline:auto}
+    .final-box p{margin:15px auto 23px}
+    .footer{background:#fff;border-top:1px solid var(--line);padding:30px 0 100px}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.78rem;color:#667085}
+    .footer small{display:block;margin-top:25px;color:#98a2b3;font-size:.72rem}
+
+
+
+    /* --- Initial loading screen --- */
+    .ravin-loader{
+      position:fixed;inset:0;z-index:9999;
+      display:grid;place-items:center;
+      background:#f8f9fb;
+      color:var(--ink);
+      opacity:1;visibility:visible;
+      transition:opacity .36s ease,visibility .36s ease;
+    }
+    .ravin-loader.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-inner{
+      width:min(315px,calc(100vw - 48px));
+      display:flex;flex-direction:column;align-items:center;
+      transform:translateY(-6px);
+    }
+    .loader-brand{
+      font-family:Manrope,Inter,sans-serif;
+      font-size:25px;font-weight:800;letter-spacing:-.055em;
+      line-height:1;color:#101828;
+    }
+    .loader-brand span{color:var(--blue)}
+    .loader-track{
+      width:100%;height:4px;margin-top:58px;
+      background:#e4e8ef;border-radius:999px;overflow:hidden;
+    }
+    .loader-bar{
+      width:32%;height:100%;border-radius:999px;background:var(--blue);
+      animation:loaderProgress 1.35s cubic-bezier(.45,.05,.55,.95) infinite;
+      transform-origin:left center;
+    }
+        @keyframes loaderProgress{
+      0%{transform:translateX(-105%) scaleX(.65)}
+      45%{transform:translateX(45%) scaleX(1)}
+      100%{transform:translateX(215%) scaleX(.72)}
+    }
+
+    /* --- Lightweight surface system ---
+       Blur is intentionally limited to fixed/primary UI. Ordinary cards stay opaque
+       so scrolling and repainting remain light on lower-end devices. */
+    .float,
+    .problem-card,
+    .service-card,
+    .price-card,
+    .addon-item,
+    .checkitem{
+      background:#fff;
+      border-color:var(--line);
+    }
+    .float{box-shadow:0 16px 40px rgba(16,24,40,.09)}
+    .price-card:hover,.problem-card:hover,.service-card:hover,.addon-item:hover{
+      border-color:rgba(176,190,211,.9);
+      box-shadow:0 18px 45px rgba(16,24,40,.10);
+    }
+    .final-box{
+      background:#e8efff;
+      border:1px solid #c4d2ee;
+    }
+    .order-modal{
+      background:rgba(11,23,48,.34)!important;
+      backdrop-filter:blur(7px) saturate(115%);
+      -webkit-backdrop-filter:blur(7px) saturate(115%);
+    }
+    .order-dialog{
+      background:rgba(255,255,255,.91)!important;
+      border-color:rgba(218,224,234,.82)!important;
+      backdrop-filter:blur(22px) saturate(125%);
+      -webkit-backdrop-filter:blur(22px) saturate(125%);
+    }
+    .order-progress,.order-bottom{
+      background:rgba(251,252,254,.72)!important;
+      backdrop-filter:blur(16px) saturate(125%);
+      -webkit-backdrop-filter:blur(16px) saturate(125%);
+    }
+    .field input,.field textarea,.software-check{
+      background:rgba(255,255,255,.78);
+    }
+    @media (prefers-reduced-motion:reduce){
+      .loader-bar{animation:none;transform:translateX(0);}
+    }
+
+    /* Motion system: subtle, layered, and mobile-friendly */
+    .reveal{
+      opacity:0;
+      transform:translate3d(0,46px,0);
+      transition:
+        opacity .72s cubic-bezier(.22,1,.36,1),
+        transform .72s cubic-bezier(.22,1,.36,1);
+      /* Avoid forcing a compositor layer for every reveal element. */    }
+    .reveal.is-visible{opacity:1;transform:translate3d(0,0,0)}
+    .reveal-fast{transition-duration:.55s}
+    .reveal-slow{transition-duration:.9s}
+
+    .stagger > *{
+      opacity:0;
+      transform:translate3d(0,28px,0);
+      transition:
+        opacity .58s cubic-bezier(.22,1,.36,1),
+        transform .58s cubic-bezier(.22,1,.36,1);
+    }
+    .stagger.is-visible > *{opacity:1;transform:translate3d(0,0,0)}
+    .stagger.is-visible > *:nth-child(1){transition-delay:.04s}
+    .stagger.is-visible > *:nth-child(2){transition-delay:.10s}
+    .stagger.is-visible > *:nth-child(3){transition-delay:.16s}
+    .stagger.is-visible > *:nth-child(4){transition-delay:.22s}
+    .stagger.is-visible > *:nth-child(5){transition-delay:.28s}
+    .stagger.is-visible > *:nth-child(6){transition-delay:.34s}
+    .stagger.is-visible > *:nth-child(7){transition-delay:.40s}
+
+    .hero-reveal{
+      opacity:0;
+      transform:translate3d(0,24px,0);
+      animation:heroUp .9s cubic-bezier(.22,1,.36,1) .08s forwards;
+    }
+    .hero-reveal.delay-1{animation-delay:.18s}
+    .hero-reveal.delay-2{animation-delay:.28s}
+    .hero-reveal.delay-3{animation-delay:.38s}
+
+    @keyframes heroUp{
+      to{opacity:1;transform:translate3d(0,0,0)}
+    }
+
+    .section-flow{
+      position:relative;
+    }
+    .section-flow::before{
+      content:"";
+      position:absolute;
+      top:-1px;
+      left:50%;
+      width:min(82px,16vw);
+      height:2px;
+      background:var(--blue);
+      border-radius:99px;
+      transform:translateX(-50%) scaleX(0);
+      transform-origin:center;
+      transition:transform .8s cubic-bezier(.22,1,.36,1);
+    }
+    .section-flow.is-visible::before{transform:translateX(-50%) scaleX(1)}
+
+    .price-card .btn{
+      transition:transform .18s ease,background .18s ease,border .18s ease,box-shadow .18s ease;
+    }
+    .price-card .package-cta{margin-top:18px}
+    .price-card:hover .btn-primary{
+      box-shadow:0 8px 22px rgba(23,105,255,.18);
+    }
+
+    .hero-visual{
+      will-change:transform;
+      transition:transform .15s linear;
+    }
+    .float.one{animation:floatOne 4.5s ease-in-out infinite}
+    .float.two{animation:floatTwo 5.2s ease-in-out .4s infinite}
+    @keyframes floatOne{
+      0%,100%{transform:rotate(-4deg) translateY(0)}
+      50%{transform:rotate(-3deg) translateY(-7px)}
+    }
+    @keyframes floatTwo{
+      0%,100%{transform:rotate(3deg) translateY(0)}
+      50%{transform:rotate(2deg) translateY(7px)}
+    }
+
+    @keyframes waPulse{
+      0%,72%,100%{box-shadow:0 10px 28px rgba(25,184,90,.25)}
+      82%{box-shadow:0 10px 30px rgba(25,184,90,.42)}
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      .reveal,.stagger > *,.hero-reveal{
+        opacity:1!important;
+        transform:none!important;
+        transition:none!important;
+        animation:none!important;
+      }
+      .section-flow::before{transform:translateX(-50%) scaleX(1);transition:none}
+      .float.one,.float.two,
+      .hero-visual{transition:none}
+    }
+
+    @media (min-width:760px){
+      .section{padding:105px 0}
+      .nav-links{display:flex}
+      .hero{padding:88px 0 105px}
+      .hero-grid{grid-template-columns:1.03fr .97fr}
+      .problem-grid{grid-template-columns:repeat(4,1fr)}
+      .service-grid{grid-template-columns:repeat(4,1fr)}
+      .pricing-grid{grid-template-columns:repeat(2,1fr)}
+      .trust-grid{grid-template-columns:.9fr 1.1fr}
+      .footer{padding-bottom:35px}
+    }
+    @media (min-width:1050px){
+      .pricing-grid{grid-template-columns:repeat(4,1fr)}
+      .price-card{padding:22px}
+      .hero-copy{padding-right:20px}
+    }
+    @media (max-width:759px){
+      .nav-links{display:none}
+      .nav-cta{display:inline-flex}
+      .hero-actions .btn{width:100%}
+      .hero-visual{min-height:280px}
+      .float{font-size:.67rem}
+      .addon-grid{grid-template-columns:1fr}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{transition:none!important;animation:none!important}
+      .price-card.is-open .package-details{max-height:430px}
+    }
+  
+/* --- RAVIN UI interaction layer --- */
+.package-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .48s cubic-bezier(.22,1,.36,1), opacity .25s ease, margin-top .35s ease;
+  margin-top: 0;
+}
+.price-card.is-open .package-details {
+  max-height: 430px;
+  opacity: 1;
+  margin-top: 2px;
+}
+.package-more {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 12px; padding: 0; border: 0; background: transparent;
+  color: var(--blue); font: inherit; font-weight: 750; cursor: pointer;
+}
+.package-more:focus-visible, .picker-option:focus-visible, .mobile-cta a:focus-visible { outline:3px solid rgba(31,111,255,.28); outline-offset:3px; }
+.package-more .chevron {
+  width: 8px; height: 8px; border-right: 1.8px solid currentColor;
+  border-bottom: 1.8px solid currentColor; transform: rotate(45deg);
+  transition: transform .3s ease;
+}
+.price-card.is-open .package-more .chevron { transform: rotate(225deg); }
+
+.package-detail-list {
+  margin: 14px 0 0; padding-top: 14px;
+  border-top: 1px dashed var(--line);
+  display: grid; gap: 9px;
+  color: var(--muted); font-size: .9rem;
+}
+.package-detail-list div { display:flex; gap:9px; align-items:flex-start; }
+.package-detail-list b { color: var(--ink); }
+
+
+.order-routes{display:grid;gap:14px}
+.order-route{padding:24px;border:1px solid rgba(218,224,234,.78);border-radius:22px;background:#fff}
+.order-route.route-consult{border-color:rgba(23,105,255,.28);box-shadow:0 12px 34px rgba(23,105,255,.07)}
+.route-label{font-size:.72rem;font-weight:850;letter-spacing:.08em;color:var(--blue);margin-bottom:9px}
+.order-route h3{font-size:1.08rem;line-height:1.25;margin-bottom:20px}
+.route-steps{display:grid;gap:10px;margin-bottom:20px}
+.route-steps>div{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:start;padding:11px 0;border-top:1px solid var(--line)}
+.route-steps span{font-family:Manrope;font-weight:800;color:var(--blue);font-size:.78rem}
+.route-steps p{font-size:.8rem;line-height:1.45}
+.route-steps strong{color:var(--ink)}
+@media (min-width:760px){.order-routes{grid-template-columns:1fr 1fr}.order-route{padding:28px}}
+
+.mobile-cta {
+  position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 10px 10px 15px;
+  background: rgba(255,255,255,.72); border: 1px solid rgba(210,217,229,.78);
+  box-shadow: 0 14px 36px rgba(16,32,55,.14);
+  border-radius: 18px; backdrop-filter: blur(20px) saturate(140%); -webkit-backdrop-filter: blur(20px) saturate(140%);
+  transform: translateY(120%); opacity: 0;
+  transition: transform .55s cubic-bezier(.22,1,.36,1), opacity .35s ease;
+}
+.mobile-cta.is-visible { transform: translateY(0); opacity: 1; }
+.mobile-cta small { display:block; color:var(--muted); font-weight:650; font-size:.72rem; }
+.mobile-cta strong { display:block; margin-top:2px; font-size:.92rem; }
+.mobile-cta a {
+  flex: 0 0 auto; padding: 11px 15px; border-radius: 12px;
+  background: var(--blue); color:#fff; text-decoration:none; font-weight:800;
+  font-size:.86rem;
+}
+@media (min-width: 800px) { .mobile-cta { display:none; } }
+
+.toast {
+  position:fixed; left:50%; bottom:88px; z-index:70;
+  transform:translate(-50%, 20px); opacity:0; pointer-events:none;
+  padding:11px 14px; border-radius:12px; background:var(--navy); color:#fff;
+  font-size:.82rem; font-weight:750; box-shadow:0 12px 30px rgba(0,0,0,.16);
+  transition:.3s ease;
+}
+.toast.is-visible { opacity:1; transform:translate(-50%,0); }
+
+.nav-progress {
+  position:fixed; top:0; left:0; height:2px; width:0; z-index:100;
+  background:var(--blue); transform-origin:left;
+}
+
+
+
+/* --- Order modal / checkout form --- */
+body.modal-open{overflow:hidden}
+.order-modal[hidden]{display:none!important}
+.order-modal{position:fixed!important;inset:0!important;z-index:1000!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:100%!important;padding:24px!important;background:rgba(11,23,48,.42)!important;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,visibility .2s ease}
+.order-modal.is-open{opacity:1;visibility:visible;pointer-events:auto}
+.order-dialog{width:min(100%,680px)!important;height:min(88vh,760px)!important;max-height:min(88vh,760px)!important;display:flex!important;flex-direction:column!important;background:#fff!important;color:var(--ink)!important;border:1px solid var(--line)!important;border-radius:24px!important;box-shadow:0 24px 70px rgba(11,23,48,.2)!important;overflow:hidden!important;transform:translateY(12px) scale(.985);transition:transform .24s cubic-bezier(.22,1,.36,1)}
+.order-modal.is-open .order-dialog{transform:translateY(0) scale(1)}
+.order-progress{display:flex!important;align-items:center;gap:8px;flex:0 0 auto;padding:11px 22px!important;background:#fbfcfe!important;border-bottom:1px solid var(--line)!important;font-size:.72rem;font-weight:750;color:#98a2b3}
+.order-progress span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.order-progress span:not(:last-child)::after{content:"→";margin-left:4px;color:#c1c7d0}
+.order-progress .active,.order-progress .done{color:var(--blue)}
+.order-progress .done::before{content:"✓";font-weight:850}
+.order-head{flex:0 0 auto;padding:18px 22px 16px!important;border-bottom:1px solid var(--line)!important}
+.order-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+.order-title-copy{min-width:0;flex:1}
+.modal-kicker{font-size:.65rem;font-weight:850;letter-spacing:.11em;color:var(--blue);margin-bottom:6px}
+.order-head h3{font-size:1.25rem;line-height:1.15;margin:0}
+.order-title-copy .micro{margin-top:6px;line-height:1.45}
+.order-head-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.order-price{font-weight:850;color:var(--blue);white-space:nowrap}
+.modal-close{width:38px!important;height:38px!important;flex:0 0 38px;display:grid!important;place-items:center;border:1px solid var(--line)!important;border-radius:12px!important;background:#fff!important;color:#475467;font-size:1.25rem;line-height:1;cursor:pointer}
+.modal-close:hover{background:var(--bg)!important;color:var(--ink)}
+#order-form{display:flex;flex:1 1 auto;min-height:0;flex-direction:column;overflow:hidden}
+.order-body{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;padding:22px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.form-step{display:none}.form-step.is-active{display:block}
+.step-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:17px}
+.step-kicker{font-size:.66rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:5px}
+.step-heading h4{font-size:1.05rem;line-height:1.2;margin:0}
+.step-heading p{margin:5px 0 0;color:var(--muted);font-size:.78rem;line-height:1.5}
+.software-count{flex:0 0 auto;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#f8fafc;color:#667085;font-size:.72rem;font-weight:800;white-space:nowrap}
+.software-count.is-complete{color:var(--blue);border-color:rgba(23,105,255,.22);background:rgba(23,105,255,.06)}
+.software-check-groups{display:grid;gap:17px}
+.software-group-title{font-size:.69rem;font-weight:850;color:#667085;margin:0 0 8px;text-transform:uppercase;letter-spacing:.05em}
+.software-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.software-check{position:relative;display:flex!important;align-items:center;gap:9px;min-height:50px;margin:0!important;padding:10px 12px;border:1px solid var(--line);border-radius:13px;background:#fff;cursor:pointer;font-size:.81rem!important;font-weight:650!important;transition:border-color .15s ease,background .15s ease,box-shadow .15s ease}
+.software-check:hover{border-color:#c8d0dc;background:#fbfcfe}
+.software-check:has(input:focus-visible){outline:3px solid rgba(23,105,255,.12);border-color:var(--blue)}
+.software-check:has(input:checked){border-color:rgba(23,105,255,.45);background:rgba(23,105,255,.055);box-shadow:0 2px 8px rgba(23,105,255,.06)}
+.software-check input{width:18px!important;height:18px!important;min-height:18px!important;margin:0;accent-color:var(--blue);flex:0 0 auto}
+.software-check input:checked+span{color:var(--blue);font-weight:800}
+.software-check input:disabled{opacity:.45}
+.software-check:has(input:disabled){cursor:not-allowed;opacity:.55;background:#f8fafc}
+.software-other-wrap{margin-top:9px}
+.software-other-wrap input{width:100%;min-height:48px;padding:12px 13px;border:1px solid #d9dee8;border-radius:13px;background:#fff;color:var(--ink);font:inherit;font-size:.88rem;outline:none}
+.software-other-wrap input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(23,105,255,.1)}
+.form-hint{margin-top:9px;font-size:.72rem!important;color:#7a8494!important;line-height:1.45}
+.software-selection-note{margin-top:15px;padding:10px 12px;border-radius:11px;background:#f7f9fc;color:#667085;font-size:.75rem;line-height:1.4}
+.software-selection-note.is-error{background:#fff5f5;color:#b42318}
+.software-selection-note.is-ready{background:rgba(23,105,255,.06);color:#175cd3}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.field{min-width:0}.field.full{grid-column:1/-1}
+.field label{display:block;margin-bottom:7px;font-size:.78rem;font-weight:800;color:#344054}.field label span{font-weight:500;color:#98a2b3}
+.field input,.field textarea{width:100%;min-height:48px;padding:12px 13px;border:1px solid #d9dee8;border-radius:13px;background:#fff;color:var(--ink);font:inherit;font-size:.9rem;outline:none;transition:border-color .18s ease,box-shadow .18s ease;box-sizing:border-box}
+.field textarea{min-height:88px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#98a2b3}
+.field input:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(23,105,255,.1)}
+.order-preview{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;padding:22px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.order-preview[hidden]{display:none!important}.preview-kicker{font-size:.66rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}.preview-heading h4{font-size:1.2rem;margin:0}.preview-heading p{margin:5px 0 17px;color:var(--muted);font-size:.78rem;line-height:1.5}
+.preview-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}.preview-block,.preview-package-row,.preview-note{padding:14px 15px;border-bottom:1px solid var(--line)}.preview-block>span,.preview-grid span,.preview-package-row span,.preview-note span{display:block;color:#667085;font-size:.7rem;font-weight:750;margin-bottom:6px}.preview-software-list{display:flex;flex-wrap:wrap;gap:6px}.preview-software-item{padding:6px 8px;border-radius:8px;background:#f2f5f9;font-size:.76rem;font-weight:700;color:#344054}.preview-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-bottom:1px solid var(--line)}.preview-grid>div{padding:13px 15px}.preview-grid>div:nth-child(odd){border-right:1px solid var(--line)}.preview-grid>div:nth-child(-n+2){border-bottom:1px solid var(--line)}.preview-grid strong,.preview-package-row strong,.preview-note strong{display:block;font-size:.82rem;line-height:1.4;word-break:break-word}.preview-note{border-bottom:0}.preview-edit{margin:13px 0 0;padding:7px 0;border:0;background:none;color:#667085;font:inherit;font-size:.8rem;font-weight:750;cursor:pointer}.preview-edit:hover{color:var(--ink)}
+.order-bottom{flex:0 0 auto;padding:12px 22px 15px;border-top:1px solid var(--line);background:#fff}.order-bottom-actions{display:flex;gap:9px}.order-bottom .btn{min-height:50px}.order-bottom .btn-full{flex:1}.modal-back{flex:0 0 auto;min-width:108px}.order-bottom .btn:disabled{opacity:.48;cursor:not-allowed;transform:none;box-shadow:none}.modal-footnote{text-align:center;margin-top:8px;color:#7a8494;font-size:.69rem;line-height:1.35}.cta-loading{pointer-events:none!important;opacity:.72}.cta-loading::after{content:"";display:inline-block;width:12px;height:12px;margin-left:7px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;vertical-align:-2px;animation:ravinSpin .7s linear infinite}@keyframes ravinSpin{to{transform:rotate(360deg)}}
+@media (max-width:759px){
+  .order-modal{align-items:flex-end!important;padding:0!important}.order-dialog{width:100%!important;height:min(94vh,800px)!important;max-height:94vh!important;border-radius:22px 22px 0 0!important;transform:translateY(24px)}.order-modal.is-open .order-dialog{transform:translateY(0)}
+  .order-progress{padding:10px 16px!important;font-size:.68rem;gap:6px}.order-head{padding:16px!important}.order-head h3{font-size:1.12rem}.order-price{font-size:.82rem}.order-body,.order-preview{padding:18px 16px}.step-heading{gap:10px}.step-heading p{max-width:48ch}.software-count{padding:6px 8px;font-size:.68rem}.software-check-grid{grid-template-columns:1fr 1fr}.software-check{min-height:52px;padding:10px;font-size:.78rem!important}.form-grid{grid-template-columns:1fr;gap:13px}.field.full{grid-column:auto}.order-bottom{padding:10px 16px calc(11px + env(safe-area-inset-bottom))}.modal-back{min-width:96px}.order-bottom .btn{min-height:48px}.preview-grid{grid-template-columns:1fr}.preview-grid>div{border-right:0!important;border-bottom:1px solid var(--line)!important}.preview-grid>div:last-child{border-bottom:0!important}
+}
+@media (max-width:390px){.software-check-grid{grid-template-columns:1fr}.order-progress{font-size:.64rem}.order-head-actions{gap:7px}.order-price{display:none}.order-bottom-actions{gap:7px}.modal-back{min-width:88px;padding-left:12px!important;padding-right:12px!important}}
+
+    /* Interactive setup finder */
+    .setup-finder{background:#eef3f8;border-top:1px solid #dfe6ee;border-bottom:1px solid #dfe6ee}
+    .finder-shell{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px;align-items:stretch}
+    .finder-intro{padding:10px 0}
+    .finder-intro h2{max-width:560px}
+    .finder-intro p{max-width:520px;margin-top:14px}
+    .finder-panel{background:#fff;border:1px solid #dfe5ec;border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(16,24,40,.05)}
+    .finder-step{display:none}
+    .finder-step.is-active{display:block;animation:finderIn .22s ease both}
+    .finder-kicker{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#667085;margin-bottom:10px}
+    .finder-question{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;margin-bottom:16px}
+    .finder-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .finder-option{position:relative}
+    .finder-option input{position:absolute;opacity:0;pointer-events:none}
+    .finder-option label{display:flex;align-items:center;min-height:52px;padding:12px 14px;border:1px solid #d9e0e8;border-radius:12px;background:#fff;cursor:pointer;font-weight:700;transition:border-color .18s,background .18s,transform .18s}
+    .finder-option label:hover{border-color:#9db4cc;transform:translateY(-1px)}
+    .finder-option input:checked+label{border-color:var(--blue);background:#f1f7ff;box-shadow:inset 0 0 0 1px var(--blue)}
+    .finder-actions{display:flex;justify-content:space-between;gap:10px;margin-top:20px}
+    .finder-actions .btn{min-width:120px}
+    .finder-progress{display:flex;gap:5px;margin-bottom:20px}
+    .finder-progress span{height:4px;flex:1;border-radius:999px;background:#e4e8ef;transition:background .2s}
+    .finder-progress span.is-active{background:var(--blue)}
+    .finder-result{display:none}
+    .finder-result.is-visible{display:block;animation:finderIn .24s ease both}
+    .finder-result-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+    .finder-result h3{font-size:1.35rem;margin:0}
+    .finder-match{font-size:.78rem;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.06em}
+    .finder-tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0}
+    .finder-tag{padding:7px 10px;border-radius:999px;background:#f2f4f7;border:1px solid #e3e7ed;font-size:.78rem;font-weight:700}
+    .finder-recommend{border-top:1px solid #e6eaf0;margin-top:18px;padding-top:18px}
+    .finder-recommend strong{font-size:1.08rem}
+    .finder-recommend p{margin-top:4px}
+    .finder-result-actions{display:flex;gap:10px;margin-top:18px}
+    .finder-result-actions .btn{flex:1}
+    @keyframes finderIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+    @media(max-width:800px){.finder-shell{grid-template-columns:1fr;gap:20px}.finder-panel{padding:18px}.finder-options{grid-template-columns:1fr}}
+    @media(prefers-reduced-motion:reduce){.finder-step.is-active,.finder-result.is-visible{animation:none}.finder-option label{transition:none}}
+
+  </style>
+</head>
+<body>
+  <div class="ravin-loader" id="ravin-loader" aria-label="Memuat RAVIN Setup">
+    <div class="loader-inner">
+      <div class="loader-brand">RAVIN<span>Setup</span></div>
+      <div class="loader-track"><div class="loader-bar"></div></div>
+    </div>
+  </div>
+  <div class="nav-progress" id="nav-progress"></div>
+
+  <nav class="nav" id="navbar" aria-label="Navigasi utama">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="RAVIN Setup">RAVIN<span>Setup</span></a>
+      <div class="nav-links">
+        <a href="#home">Beranda</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#paket">Paket</a>
+        <a href="#cara-order">Cara Order</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="btn btn-primary nav-cta" data-wa="Chat Sekarang" href="#">Chat Sekarang</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy hero-reveal">
+          <div class="eyebrow">Setup laptop untuk pelajar SMK</div>
+          <h1>Laptop Beres.<br>Tinggal Pakai.</h1>
+          <p class="lead hero-reveal delay-1">Jasa instalasi & setup software untuk pelajar SMK.</p>
+          <p class="micro">Pilih software yang kamu butuhkan. Kami bantu instalasi, setup dasar, dan testing setelahnya.</p>
+          <div class="hero-actions hero-reveal delay-2">
+            <a class="btn btn-primary" data-wa="Chat & Konsultasi" href="#">Chat & Konsultasi</a>
+            <a class="btn btn-secondary" href="#paket">Lihat Paket</a>
+          </div>
+          <p class="micro">Mulai Rp15K · Khusus pelajar · Bisa request software</p>
+        </div>
+
+        <div class="hero-visual hero-reveal delay-3" aria-label="Ilustrasi laptop dengan checklist tugas dan folder">
+          <div class="float one"><span class="dot"></span>Software siap</div>
+          <div class="float two">✓ Setup selesai</div>
+          <div class="laptop">
+            <div class="screen">
+              <div class="screen-top"></div>
+              <div class="screen-grid">
+                <div class="folder-panel">
+                  <div class="mini-title">MY SCHOOL</div>
+                  <div class="folder active">📁 DKV</div>
+                  <div class="folder">📁 Tugas</div>
+                  <div class="folder">📁 Project</div>
+                  <div class="folder">📁 Referensi</div>
+                </div>
+                <div class="task-panel">
+                  <div class="mini-title">TODAY</div>
+                  <div class="task"><span class="check">✓</span> Photoshop siap</div>
+                  <div class="task"><span class="check">✓</span> Setup dasar</div>
+                  <div class="task"><span class="check">✓</span> Software terpasang</div>
+                  <div class="task"><span class="check">✓</span> Final check</div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section setup-finder" id="cari-kebutuhan">
+      <div class="container finder-shell">
+        <div class="finder-intro">
+          <div class="eyebrow">Belum tahu mulai dari mana?</div>
+          <h2>Cari setup yang cocok buat kebutuhanmu.</h2>
+          <p>Jawab tiga pertanyaan singkat. Hasilnya hanya rekomendasi awal sebelum kamu chat RAVIN.</p>
+        </div>
+        <div class="finder-panel" id="setup-finder">
+          <div class="finder-progress" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
+          <div class="finder-step is-active" data-step="1">
+            <div class="finder-kicker">01 / Jurusan</div>
+            <div class="finder-question">Kamu dari jurusan apa?</div>
+            <div class="finder-options">
+              <div class="finder-option"><input id="f-dkv" name="finder-major" type="radio" value="DKV"><label for="f-dkv">DKV</label></div>
+              <div class="finder-option"><input id="f-tkj" name="finder-major" type="radio" value="TKJ"><label for="f-tkj">TKJ</label></div>
+              <div class="finder-option"><input id="f-rpl" name="finder-major" type="radio" value="RPL"><label for="f-rpl">RPL</label></div>
+              <div class="finder-option"><input id="f-other" name="finder-major" type="radio" value="Lainnya"><label for="f-other">Lainnya</label></div>
+            </div>
+          </div>
+          <div class="finder-step" data-step="2">
+            <div class="finder-kicker">02 / Kebutuhan</div>
+            <div class="finder-question">Software paling banyak dipakai untuk apa?</div>
+            <div class="finder-options">
+              <div class="finder-option"><input id="f-design" name="finder-use" type="radio" value="Desain"><label for="f-design">Desain</label></div>
+              <div class="finder-option"><input id="f-video" name="finder-use" type="radio" value="Video"><label for="f-video">Video / editing</label></div>
+              <div class="finder-option"><input id="f-school" name="finder-use" type="radio" value="Sekolah"><label for="f-school">Tugas sekolah</label></div>
+              <div class="finder-option"><input id="f-code" name="finder-use" type="radio" value="Coding"><label for="f-code">Coding</label></div>
+            </div>
+          </div>
+          <div class="finder-step" data-step="3">
+            <div class="finder-kicker">03 / Jumlah software</div>
+            <div class="finder-question">Kira-kira butuh berapa software?</div>
+            <div class="finder-options">
+              <div class="finder-option"><input id="f-one" name="finder-count" type="radio" value="1"><label for="f-one">1 software</label></div>
+              <div class="finder-option"><input id="f-four" name="finder-count" type="radio" value="4"><label for="f-four">2–4 software</label></div>
+              <div class="finder-option"><input id="f-seven" name="finder-count" type="radio" value="7"><label for="f-seven">5–7 software</label></div>
+              <div class="finder-option"><input id="f-many" name="finder-count" type="radio" value="8"><label for="f-many">Lebih banyak</label></div>
+            </div>
+          </div>
+          <div class="finder-result" id="finder-result" aria-live="polite">
+            <div class="finder-result-top"><div><div class="finder-match">Hasil sementara</div><h3 id="finder-title">SCHOOL READY</h3></div></div>
+            <div class="finder-tags" id="finder-tags"></div>
+            <div class="finder-recommend"><strong id="finder-price">Rp30K</strong><p id="finder-description">Untuk beberapa software sekolah.</p></div>
+            <div class="finder-result-actions"><button class="btn btn-secondary" id="finder-reset" type="button">Ulangi</button><button class="btn btn-primary" id="finder-package" type="button">Pilih paket</button></div>
+          </div>
+          <div class="finder-actions" id="finder-actions"><button class="btn btn-secondary" id="finder-back" type="button" hidden>Kembali</button><button class="btn btn-primary" id="finder-next" type="button" disabled>Lanjut →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section problem section-flow reveal" id="masalah">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Relate banget?</div>
+          <h2>Punya laptop, tapi isinya masih kosong?</h2>
+        </div>
+        <div class="problem-grid stagger">
+<div class="problem-card">
+  <div class="problem-number">01</div>
+  <strong>Laptop masih kosong.</strong>
+  <p>Baru punya laptop, tapi software untuk sekolah belum lengkap.</p>
+</div>
+
+<div class="problem-card">
+  <div class="problem-number">02</div>
+  <strong>Software sesuai jurusan.</strong>
+  <p>Setiap jurusan punya software yang berbeda, terutama DKV.</p>
+</div>
+
+<div class="problem-card">
+  <div class="problem-number">03</div>
+  <strong>Belum tahu mau pasang apa.</strong>
+  <p>Masih bingung software apa yang perlu disiapkan.</p>
+</div>
+
+<div class="problem-card">
+  <div class="problem-number">04</div>
+  <strong>Bingung pasangnya.</strong>
+  <p>Belum yakin cara memasang dan mengatur software.</p>
+</div>
+        </div>
+        <p class="lead">Tinggal sebutkan software yang kamu butuhkan. Kami bantu pasang sampai siap dipakai.</p>
+      </div>
+    </section>
+
+    <section class="section section-flow reveal" id="layanan">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Layanan</div>
+          <h2>Bantu pasang dan siapkan software siap pakai.</h2>
+          <p>RAVIN fokus membantu software siap dipakai untuk kebutuhan sekolah.</p>
+        </div>
+        <div class="service-grid stagger">
+          <article class="service-card"><div class="service-mark">01 / INSTALL</div><h3>Instalasi Software</h3><p>Pasang software yang kamu butuhkan sesuai paket atau request.</p></article>
+          <article class="service-card"><div class="service-mark">02 / SETUP</div><h3>Setup Dasar</h3><p>Pengaturan awal software agar siap digunakan sesuai kebutuhan.</p></article>
+          <article class="service-card"><div class="service-mark">03 / TESTING</div><h3>Testing</h3><p>Software dibuka dan dicek setelah instalasi sebelum pengerjaan selesai.</p></article>
+          <article class="service-card"><div class="service-mark">04 / REQUEST</div><h3>Request Software</h3><p>Sebutkan software atau kebutuhan jurusanmu. Kami bantu cek apakah bisa dipasang.</p></article>
+        </div>
+        <div class="note">Sebelum instalasi, kami cek kecocokan software dengan laptopmu.</div>
+      </div>
+    </section>
+
+    <section class="section pricing section-flow reveal" id="paket">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Paket</div>
+          <h2>Pilih software yang kamu butuhkan.</h2>
+          <p>Mulai dari satu software sampai beberapa software sekaligus. Kalau belum yakin, chat dulu.</p>
+        </div>
+        <div class="pricing-grid stagger">
+          <article class="price-card">
+            <h3>ONE APP</h3><p>Untuk kebutuhan satu software.</p>
+            <div class="price">Rp15K</div>
+            <ul class="features"><li>1 software</li><li>Instalasi</li><li>Setup dasar</li><li>Testing</li></ul>
+            <button class="package-more" type="button" aria-expanded="false">Lihat detail <span class="chevron" aria-hidden="true"></span></button>
+            <div class="package-details" aria-hidden="true"><div class="package-detail-list">
+              <div><span>•</span><span><b>Contoh:</b> Photoshop saja atau Microsoft Word saja.</span></div>
+              <div><span>•</span><span><b>Catatan:</b> software harus dapat dipasang pada sistem laptop.</span></div>
+            </div></div>
+            <button class="btn btn-secondary btn-full package-cta" type="button" data-package="ONE APP" data-price="Rp15K">Pilih Paket</button>
+          </article>
+          <article class="price-card popular">
+            <span class="badge">PALING PRAKTIS</span>
+            <h3>SCHOOL READY</h3><p>Untuk software sekolah sehari-hari.</p>
+            <div class="price">Rp30K</div>
+            <ul class="features"><li>Hingga 4 software</li><li>Instalasi</li><li>Setup dasar</li><li>Testing</li></ul>
+            <button class="package-more" type="button" aria-expanded="false">Lihat detail <span class="chevron" aria-hidden="true"></span></button>
+            <div class="package-details" aria-hidden="true"><div class="package-detail-list">
+              <div><span>•</span><span><b>Contoh:</b> Word + Excel + PowerPoint + Canva.</span></div>
+              <div><span>•</span><span><b>Catatan:</b> kamu bebas menyebutkan software yang memang dibutuhkan.</span></div>
+            </div></div>
+            <button class="btn btn-primary btn-full package-cta" type="button" data-package="SCHOOL READY" data-price="Rp30K">Pilih Paket</button>
+          </article>
+          <article class="price-card">
+            <span class="badge">KHUSUS DKV</span>
+            <h3>DKV READY</h3><p>Untuk kebutuhan desain & editing, terutama siswa DKV.</p>
+            <div class="price">Rp50K</div>
+            <ul class="features"><li>Hingga 7 software desain/editing</li><li>Instalasi</li><li>Setup dasar</li><li>Konfigurasi sesuai kebutuhan</li><li>Testing</li></ul>
+            <button class="package-more" type="button" aria-expanded="false">Lihat detail <span class="chevron" aria-hidden="true"></span></button>
+            <div class="package-details" aria-hidden="true"><div class="package-detail-list">
+              <div><span>•</span><span><b>Contoh:</b> Photoshop, Illustrator, CorelDRAW, Premiere Pro, After Effects, Canva, Microsoft Office.</span></div>
+              <div><span>•</span><span><b>Catatan:</b> ketersediaan instalasi menyesuaikan spesifikasi dan sistem laptop.</span></div>
+            </div></div>
+            <button class="btn btn-secondary btn-full package-cta" type="button" data-package="DKV READY" data-price="Rp50K">Pilih Paket</button>
+          </article>
+          <article class="price-card">
+            <h3>FULL SETUP</h3><p>Untuk beberapa software sekaligus.</p>
+            <div class="price">Rp75K</div>
+            <ul class="features"><li>Instalasi sesuai kebutuhan</li><li>Setup dasar masing-masing software</li><li>Konfigurasi awal</li><li>Testing seluruh software</li></ul>
+            <button class="package-more" type="button" aria-expanded="false">Lihat detail <span class="chevron" aria-hidden="true"></span></button>
+            <div class="package-details" aria-hidden="true"><div class="package-detail-list">
+              <div><span>•</span><span><b>Cocok untuk:</b> pengguna yang membutuhkan beberapa software sekaligus.</span></div>
+              <div><span>•</span><span><b>Catatan:</b> software dan jumlah instalasi dibahas berdasarkan kebutuhan dan spesifikasi laptop.</span></div>
+            </div></div>
+            <button class="btn btn-secondary btn-full package-cta" type="button" data-package="FULL SETUP" data-price="Rp75K">Pilih Paket</button>
+          </article>
+        </div>
+        <p class="pricing-note">Ketersediaan instalasi menyesuaikan spesifikasi dan sistem laptop.</p>
+        <div class="addon" id="addon">
+          <div class="section-head" style="margin-top:65px;margin-bottom:0">
+            <div class="eyebrow">Tambahan</div>
+            <h2 style="font-size:clamp(1.7rem,4vw,2.35rem)">Butuh tambahan?</h2>
+            <p>Tambahan dibicarakan saat chat setelah kebutuhan utama sudah jelas.</p>
+          </div>
+          <div class="addon-grid stagger">
+            <div class="addon-item"><span>Software tambahan</span><strong>+Rp15K/software</strong></div>
+            <div class="addon-item"><span>Instalasi Windows</span><strong>+Rp25K</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-flow reveal" id="cara-order">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Cara Order</div>
+          <h2>Sudah tahu paket atau belum?</h2>
+          <p>Sudah tahu paketnya atau masih bingung? Keduanya bisa langsung lanjut lewat WhatsApp.</p>
+        </div>
+        <div class="order-routes">
+          <article class="order-route">
+            <div class="route-label">SUDAH TAHU KEBUTUHAN</div>
+            <h3>Pilih software → isi data → cek → WhatsApp</h3>
+            <div class="route-steps">
+              <div><span>01</span><p><strong>Pilih software</strong><br>Pilih software yang memang kamu butuhkan.</p></div>
+              <div><span>02</span><p><strong>Isi data</strong><br>Nama, kelas, jurusan, dan laptop.</p></div>
+              <div><span>03</span><p><strong>Cek & WhatsApp</strong><br>Periksa pesanan, lalu lanjutkan ke WhatsApp.</p></div>
+            </div>
+            <a class="btn btn-secondary btn-full" href="#paket">Lihat Paket</a>
+          </article>
+          <article class="order-route route-consult">
+            <div class="route-label">BELUM YAKIN</div>
+            <h3>Ceritakan kebutuhan → kami cek → WhatsApp</h3>
+            <div class="route-steps">
+              <div><span>01</span><p><strong>Ceritakan kebutuhan</strong><br>Sebutkan tugas, jurusan, dan software yang sudah kamu ketahui.</p></div>
+              <div><span>02</span><p><strong>Kami cek</strong><br>Kami bantu melihat kebutuhan dan spesifikasi laptopnya.</p></div>
+              <div><span>03</span><p><strong>WhatsApp</strong><br>Lanjutkan pembahasan setelah kebutuhan jelas.</p></div>
+            </div>
+            <a class="btn btn-primary btn-full" data-wa="Chat &amp; Konsultasi" href="#">Chat &amp; Konsultasi</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust section-flow reveal" id="trust">
+      <div class="container trust-grid">
+        <div>
+          <div class="eyebrow">Final check</div>
+          <h2>Yang kami cek sebelum selesai</h2>
+          <p style="margin-top:15px">Bukan sekadar install lalu selesai. Kami cek hasil instalasi dan menjelaskan singkat setelah pengerjaan.</p>
+        </div>
+        <div class="checklist stagger">
+          <div class="checkitem"><span class="checkicon">✓</span>Software berhasil ter-install</div>
+          <div class="checkitem"><span class="checkicon">✓</span>Software bisa dibuka</div>
+          <div class="checkitem"><span class="checkicon">✓</span>Setup dasar sesuai kebutuhan</div>
+          <div class="checkitem"><span class="checkicon">✓</span>Software yang dipasang sesuai permintaan</div>
+          <div class="checkitem"><span class="checkicon">✓</span>Kamu mendapat penjelasan singkat setelah selesai</div>
+          <div class="checkitem"><span class="checkicon">✓</span>Data pribadi tidak perlu diakses di luar kebutuhan pengerjaan</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-flow reveal" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">FAQ</div>
+          <h2>Pertanyaan sebelum order.</h2>
+        </div>
+        <div class="faq-list reveal reveal-fast">
+          <details><summary>Bisa request software tertentu?</summary><p>Bisa. Sebutkan software yang kamu butuhkan, termasuk software Adobe bila diperlukan. Kami bantu cek apakah software tersebut bisa dipasang pada laptopmu.</p></details>
+          <details><summary>Apakah semua laptop bisa?</summary><p>Belum tentu. Instalasi bergantung pada spesifikasi dan sistem laptop. Kami cek sebelum pemasangan.</p></details>
+          <details><summary>Bisa install beberapa software sekaligus?</summary><p>Bisa. Gunakan SCHOOL READY, DKV READY, atau FULL SETUP sesuai jumlah dan kebutuhan software.</p></details>
+          <details><summary>Kalau saya tidak tahu nama software yang dibutuhkan?</summary><p>Sebutkan jurusan dan kebutuhan tugasmu. Kami bantu mengarahkan software yang relevan untuk dibahas sebelum instalasi.</p></details>
+          <details><summary>Bagaimana proses dan waktunya?</summary><p>Laptop bisa diantarkan atau diserahkan saat ketemuan. Waktu dan lokasi disepakati terlebih dahulu. Lama pengerjaan tergantung jumlah software dan proses instalasi, lalu dikonfirmasi setelah kebutuhan diketahui.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final section-flow reveal" id="final">
+      <div class="container">
+        <div class="final-box reveal reveal-slow">
+          <div class="eyebrow">RAVIN Setup</div>
+          <h2>Butuh software buat tugas?</h2>
+          <p class="lead">Sebutkan software yang kamu butuhkan. Kami bantu cek dan siapkan instalasinya.</p>
+          <a class="btn btn-primary" data-wa="Chat &amp; Konsultasi" href="#">CHAT &amp; KONSULTASI</a>
+          <div class="micro">Mulai Rp15K</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand">RAVIN<span>Setup</span></div>
+          <p style="font-size:.78rem;margin-top:5px">Laptop Beres. Tinggal Pakai.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a><a href="#layanan">Layanan</a><a href="#paket">Paket</a><a href="#faq">FAQ</a><a data-wa="WhatsApp" href="#">Chat &amp; Konsultasi</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="order-modal" id="order-modal" aria-hidden="true" hidden>
+    <div class="order-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-package-title">
+      <div class="order-progress" aria-label="Tahapan pemesanan">
+        <span id="progress-step-1" class="active">01 Kebutuhan</span>
+        <span id="progress-step-2">02 Data</span>
+        <span id="progress-step-3">03 Cek</span>
+      </div>
+
+      <div class="order-head">
+        <div class="order-title-row">
+          <div class="order-title-copy">
+            <div class="modal-kicker">RAVIN SETUP</div>
+            <h3 id="modal-package-title">Ceritakan kebutuhanmu</h3>
+            <div class="micro" id="modal-package-subtitle">Pilih software yang kamu butuhkan, atau pilih konsultasi jika belum yakin.</div>
+          </div>
+          <div class="order-head-actions">
+            <div class="order-price" id="modal-package-price"></div>
+            <button class="modal-close" type="button" data-close-modal aria-label="Tutup">×</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="order-form" novalidate>
+        <input type="hidden" id="selected-package" value="CONSULT">
+
+        <div class="order-body" id="order-body">
+          <section class="form-step is-active" id="form-step-software" data-step="1" aria-labelledby="software-section-title">
+            <div class="step-heading">
+              <div>
+                <div class="step-kicker">Langkah 1</div>
+                <h4 id="software-section-title">Software yang kamu butuhkan</h4>
+                <p id="software-section-description">Pilih yang kamu perlukan. Bisa lebih dari satu.</p>
+              </div>
+              <div class="software-count" id="software-count" aria-live="polite">0 dipilih</div>
+            </div>
+            <div id="software-field"></div>
+            <div class="software-selection-note" id="software-selection-note" aria-live="polite">Belum ada software dipilih.</div>
+          </section>
+
+          <section class="form-step" id="form-step-data" data-step="2" aria-labelledby="data-section-title" hidden>
+            <div class="step-heading">
+              <div>
+                <div class="step-kicker">Langkah 2</div>
+                <h4 id="data-section-title">Tentang kamu</h4>
+                <p>Data ini membantu kami mengecek kebutuhan dan spesifikasi laptop.</p>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="order-name">Nama</label>
+                <input id="order-name" name="name" type="text" autocomplete="name" required placeholder="Nama kamu">
+              </div>
+              <div class="field">
+                <label for="order-class">Kelas</label>
+                <input id="order-class" name="class" type="text" autocomplete="off" required placeholder="XI DKV 2">
+              </div>
+              <div class="field">
+                <label for="order-major">Jurusan</label>
+                <input id="order-major" name="major" type="text" autocomplete="organization-title" required placeholder="DKV">
+              </div>
+              <div class="field">
+                <label for="order-laptop">Laptop</label>
+                <input id="order-laptop" name="laptop" type="text" autocomplete="off" required placeholder="ASUS Vivobook 14">
+              </div>
+              <div class="field full">
+                <label for="order-note">Catatan <span>(opsional)</span></label>
+                <textarea id="order-note" name="note" rows="3" placeholder="Misalnya deadline, versi software, atau kebutuhan khusus"></textarea>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="order-preview" id="order-preview" hidden aria-live="polite" aria-labelledby="preview-title">
+          <div class="preview-kicker">Langkah 3 · Cek</div>
+          <div class="preview-heading">
+            <div>
+              <h4 id="preview-title">Cek pesananmu</h4>
+              <p>Pastikan data dan software sudah benar sebelum lanjut ke WhatsApp.</p>
+            </div>
+          </div>
+          <div class="preview-card">
+            <div class="preview-block">
+              <span id="preview-software-label">Software</span>
+              <div id="preview-software-list" class="preview-software-list"></div>
+            </div>
+            <div class="preview-grid">
+              <div><span>Nama</span><strong id="preview-name">—</strong></div>
+              <div><span>Kelas</span><strong id="preview-class">—</strong></div>
+              <div><span>Jurusan</span><strong id="preview-major">—</strong></div>
+              <div><span>Laptop</span><strong id="preview-laptop">—</strong></div>
+            </div>
+            <div class="preview-package-row"><span>Paket</span><strong id="preview-package">—</strong></div>
+            <div class="preview-note" id="preview-purpose-row" hidden><span>Kebutuhan</span><strong id="preview-purpose">—</strong></div>
+            <div class="preview-note" id="preview-need-row" hidden><span>Cerita kebutuhan</span><strong id="preview-need">—</strong></div>
+            <div class="preview-note" id="preview-note-row" hidden><span>Catatan</span><strong id="preview-note">—</strong></div>
+          </div>
+          <button class="preview-edit" id="preview-edit" type="button">← Ubah data</button>
+        </section>
+
+        <div class="order-bottom">
+          <div class="order-bottom-actions">
+            <button class="btn btn-ghost modal-back" id="modal-back" type="button" hidden>← Kembali</button>
+            <button class="btn btn-primary btn-full" id="wa-submit" type="button" disabled>Lanjut ke Data →</button>
+          </div>
+          <div class="modal-footnote" id="modal-footnote">Pilih software terlebih dahulu.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP_NUMBER = "6285731712509";
+
+    function openWhatsApp(message){
+      const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+      const popup = window.open(url, "_blank", "noopener,noreferrer");
+      return !!popup;
+    }
+
+    function showToast(message){
+      const toast=document.getElementById("toast");
+      if(!toast) return;
+      toast.textContent=message;
+      toast.classList.add("is-visible");
+      clearTimeout(window.__ravinToastTimer);
+      window.__ravinToastTimer=setTimeout(()=>toast.classList.remove("is-visible"),3200);
+    }
+
+    const loader = document.getElementById("ravin-loader");
+    function hideRavinLoader(){
+      if(!loader || loader.classList.contains("is-hidden")) return;
+      loader.classList.add("is-hidden");
+      setTimeout(()=>loader.remove(),360);
+    }
+    // Do not keep the whole page behind the loader while external assets are still loading.
+    if(document.readyState === "loading"){
+      document.addEventListener("DOMContentLoaded",hideRavinLoader,{once:true});
+    }else{
+      hideRavinLoader();
+    }
+    window.setTimeout(hideRavinLoader,3000);
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const revealItems = document.querySelectorAll(".reveal, .stagger");
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {threshold:.12, rootMargin:"0px 0px -7% 0px"});
+      revealItems.forEach(el => observer.observe(el));
+    } else revealItems.forEach(el => el.classList.add("is-visible"));
+
+    const heroVisual = document.querySelector(".hero-visual");
+    const nav=document.getElementById("navbar"), progress=document.getElementById("nav-progress");
+    const canParallax=!reduceMotion && heroVisual && matchMedia("(min-width:760px)").matches;
+    let scrollTicking=false;
+    function updateScrollUI(){
+      const y=window.scrollY||window.pageYOffset||0;
+      if(nav) nav.classList.toggle("scrolled",y>8);
+      if(progress){
+        const max=document.documentElement.scrollHeight-window.innerHeight;
+        progress.style.width=(max>0?Math.min(100,(y/max)*100):0)+"%";
+      }
+      if(canParallax){
+        heroVisual.style.transform=`translate3d(0,${Math.min(y*.035,18)}px,0)`;
+      }
+      scrollTicking=false;
+    }
+    function requestScrollUI(){
+      if(scrollTicking)return;
+      scrollTicking=true;
+      requestAnimationFrame(updateScrollUI);
+    }
+    addEventListener("scroll",requestScrollUI,{passive:true});
+    addEventListener("resize",requestScrollUI,{passive:true});
+    updateScrollUI();
+
+    document.querySelectorAll(".package-more").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        const card=btn.closest(".price-card"), open=card.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded",open);
+        const details=card.querySelector(".package-details");
+        if(details) details.setAttribute("aria-hidden",!open);
+        const node=[...btn.childNodes].find(n=>n.nodeType===Node.TEXT_NODE);
+        if(node) node.textContent=open?"Sembunyikan detail ":"Lihat detail ";
+      });
+    });
+
+
+    // Setup Finder: one useful interaction instead of decorative animation.
+    const finder=document.getElementById("setup-finder");
+    if(finder){
+      const steps=[...finder.querySelectorAll(".finder-step")];
+      const progress=[...finder.querySelectorAll(".finder-progress span")];
+      const next=finder.querySelector("#finder-next"), back=finder.querySelector("#finder-back");
+      const actions=finder.querySelector("#finder-actions"), result=finder.querySelector("#finder-result");
+      const packageBtn=finder.querySelector("#finder-package"), reset=finder.querySelector("#finder-reset");
+      let current=0;
+      function selected(name){return finder.querySelector(`input[name="${name}"]:checked`)}
+      function renderStep(){
+        steps.forEach((el,i)=>el.classList.toggle("is-active",i===current));
+        progress.forEach((el,i)=>el.classList.toggle("is-active",i<=current));
+        back.hidden=current===0;
+        const names=["finder-major","finder-use","finder-count"];
+        next.disabled=!selected(names[current]);
+      }
+      function getRecommendation(){
+        const major=selected("finder-major")?.value;
+        const use=selected("finder-use")?.value;
+        const count=Number(selected("finder-count")?.value||1);
+
+        // Package logic follows the actual positioning: DKV READY is a DKV/design-editing package,
+        // not simply the 5–7 software tier. Non-DKV users can never be routed to DKV READY.
+        let key;
+        if(count===1){
+          key="ONE APP";
+        }else if(count>7){
+          key="FULL SETUP";
+        }else if(major==="DKV" && (use==="Desain" || use==="Video")){
+          key="DKV READY";
+        }else{
+          key="SCHOOL READY";
+        }
+
+        const data=packages[key];
+        if(!data) return;
+        const tags=[major,use,`${count>7?"8+":count} software`];
+        document.getElementById("finder-title").textContent=key;
+        document.getElementById("finder-price").textContent=data.price;
+        document.getElementById("finder-description").textContent=data.desc;
+        const tagBox=document.getElementById("finder-tags");
+        if(tagBox){
+          tagBox.replaceChildren(...tags.map(value=>{
+            const tag=document.createElement("span");
+            tag.className="finder-tag";
+            tag.textContent=value;
+            return tag;
+          }));
+        }
+        packageBtn.dataset.package=key;
+      }
+      function showResult(){getRecommendation();steps.forEach(el=>el.classList.remove("is-active"));actions.style.display="none";result.classList.add("is-visible");progress.forEach(el=>el.classList.add("is-active"));}
+      next.addEventListener("click",()=>{if(current<2){current++;renderStep()}else showResult()});
+      back.addEventListener("click",()=>{if(current>0){current--;renderStep()}});
+      finder.addEventListener("change",()=>{if(current<3)renderStep()});
+      reset.addEventListener("click",()=>{finder.querySelectorAll("input[type=radio]").forEach(x=>x.checked=false);result.classList.remove("is-visible");actions.style.display="flex";current=0;renderStep()});
+      packageBtn.addEventListener("click",()=>{const key=packageBtn.dataset.package;if(typeof openOrderModal==="function"){openOrderModal(key,packageBtn);}});
+      renderStep();
+    }
+
+    // Single source of truth for package behavior used by the modal and validation.
+    const packages={
+      "ONE APP":{price:"Rp15K",type:"one",limit:1,desc:"Untuk satu software yang memang kamu butuhkan."},
+      "SCHOOL READY":{price:"Rp30K",type:"school",limit:4,desc:"Untuk kebutuhan sekolah dengan beberapa software."},
+      "DKV READY":{price:"Rp50K",type:"dkv",limit:7,desc:"Untuk kebutuhan desain atau editing, terutama siswa DKV."},
+      "FULL SETUP":{price:"Rp75K",type:"full",limit:Infinity,desc:"Untuk kebutuhan beberapa software sekaligus dalam satu setup."},
+      "CONSULT":{price:"",type:"consult",limit:Infinity,desc:"Ceritakan kebutuhanmu dan kami bantu arahkan."}
+    };
+
+    const softwareOptions=[
+      {group:"Office & Sekolah",items:["Microsoft Word","Microsoft Excel","Microsoft PowerPoint","PDF Reader","Google Chrome"]},
+      {group:"Desain Grafis",items:["Adobe Photoshop","Adobe Illustrator","CorelDRAW","Canva"]},
+      {group:"Video & Editing",items:["Adobe Premiere Pro","Adobe After Effects","CapCut"]},
+      {group:"3D & Arsitektur",items:["SketchUp","Blender","AutoCAD"]},
+      {group:"Coding",items:["Visual Studio Code","Android Studio"]},
+      {group:"Lainnya",items:["Software lainnya"]}
+    ];
+
+    function getPackageLimit(key){
+      return packages[key]?.limit ?? Infinity;
+    }
+
+    function slugify(value){
+      return value.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+    }
+
+    function buildSoftwareCheckboxes(key){
+      const limit=getPackageLimit(key);
+      const groups=softwareOptions.map((group,groupIndex)=>{
+        const items=group.items.map((item,itemIndex)=>{
+          const id=`software-${slugify(key)}-${groupIndex}-${itemIndex}`;
+          return `<label class="software-check" for="${id}"><input id="${id}" name="softwareChoice" type="checkbox" value="${item}"><span>${item}</span></label>`;
+        }).join("");
+        return `<div class="software-group"><div class="software-group-title">${group.group}</div><div class="software-check-grid">${items}</div></div>`;
+      }).join("");
+      const limitText=limit===Infinity?"Pilih sesuai kebutuhan.":`Maksimal ${limit} software untuk paket ini.`;
+      return `<div class="software-check-groups">${groups}</div><div class="form-hint" id="software-hint">${limitText} Software lainnya bisa ditulis setelah dipilih.</div><div class="software-other-wrap" id="software-other-wrap" hidden><input id="software-other" name="softwareOther" type="text" autocomplete="off" placeholder="Tulis nama software lainnya"></div>`;
+    }
+
+    function setCtaLoading(btn,loading){
+      if(!btn)return;
+      if(loading){
+        if(!btn.dataset.originalText)btn.dataset.originalText=btn.textContent;
+        btn.classList.add("cta-loading");btn.setAttribute("aria-busy","true");btn.textContent="Menyiapkan";
+      }else{
+        if(btn.dataset.originalText)btn.textContent=btn.dataset.originalText;
+        btn.classList.remove("cta-loading");btn.removeAttribute("aria-busy");
+      }
+    }
+
+    let lastModalTrigger=null;
+    let modalStep=1;
+
+    function updateModalProgress(){
+      const p1=document.getElementById("progress-step-1"),p2=document.getElementById("progress-step-2"),p3=document.getElementById("progress-step-3");
+      const consult=isConsultMode();
+      p1.textContent=consult?"01 Kebutuhan":"01 Software";
+      p2.textContent=consult?"02 Data":"02 Data";
+      p3.textContent=consult?"03 WhatsApp":"03 Cek";
+      [p1,p2,p3].forEach(el=>el.classList.remove("active","done"));
+      if(modalStep===1)p1.classList.add("active");
+      if(modalStep===2){p1.classList.add("done");p2.classList.add("active");}
+      if(modalStep===3){p1.classList.add("done");p2.classList.add("done");p3.classList.add("active");}
+    }
+
+    function showFormStep(step){
+      modalStep=step;
+      const softwareStep=document.getElementById("form-step-software"),dataStep=document.getElementById("form-step-data"),preview=document.getElementById("order-preview"),back=document.getElementById("modal-back"),submit=document.getElementById("wa-submit");
+      softwareStep.hidden=step!==1;dataStep.hidden=step!==2;preview.hidden=step!==3;
+      softwareStep.classList.toggle("is-active",step===1);dataStep.classList.toggle("is-active",step===2);
+      back.hidden=step===1||step===3;
+      submit.textContent=step===1?"Lanjut ke Data →":step===2?"Cek Data →":"Buka WhatsApp →";
+      submit.dataset.previewReady=step===3?"true":"false";
+      updateModalProgress();
+      const body=document.getElementById("order-body");
+      if(body)body.scrollTop=0;
+      if(step===1){document.getElementById("modal-footnote").textContent=isConsultMode()?"Ceritakan kebutuhanmu terlebih dahulu.":"Pilih software terlebih dahulu.";updateSoftwareState();}
+      if(step===2){document.getElementById("modal-footnote").textContent=isConsultMode()?"Isi data agar kami bisa melanjutkan konsultasi.":"Isi data agar kami bisa mengecek kebutuhanmu.";validateForm();}
+      if(step===3)document.getElementById("modal-footnote").textContent="Cek lagi detailnya sebelum lanjut ke WhatsApp.";
+    }
+
+    function openOrderModal(key,trigger){
+      const data=packages[key]||packages.CONSULT;
+      lastModalTrigger=trigger||document.activeElement;
+      const form=document.getElementById("order-form");
+      const modal=document.getElementById("order-modal");
+      const isConsult=data.type==="consult";
+
+      setCtaLoading(trigger,true);
+      modal.hidden=false;
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden","false");
+      document.body.classList.add("modal-open");
+
+      form.reset();
+      document.getElementById("selected-package").value=key;
+      document.getElementById("modal-package-title").textContent=isConsult?"Ceritakan kebutuhanmu":key;
+      document.getElementById("modal-package-price").textContent=data.price?"· "+data.price:"";
+      document.getElementById("modal-package-subtitle").textContent=isConsult
+        ?"Belum yakin software atau paket yang cocok? Ceritakan kebutuhanmu, kami bantu cek."
+        :"Pilih software yang kamu butuhkan. Kami bantu cek setup-nya.";
+
+      document.getElementById("software-section-title").textContent=isConsult?"Ceritakan kebutuhanmu":"Software yang kamu butuhkan";
+      document.getElementById("software-section-description").textContent=isConsult
+        ?"Sebutkan tugas, jurusan, dan software yang sudah kamu ketahui. Kalau belum tahu nama softwarenya, tidak masalah."
+        :"Pilih yang kamu perlukan. Bisa lebih dari satu.";
+      document.getElementById("software-count").hidden=isConsult;
+      document.getElementById("software-selection-note").hidden=isConsult;
+      document.getElementById("software-field").innerHTML=isConsult?buildConsultFields():buildSoftwareCheckboxes(key);
+      const softwareOtherWrap=document.getElementById("software-other-wrap");
+      if(softwareOtherWrap) softwareOtherWrap.hidden=true;
+      document.getElementById("order-note").value="";
+      document.getElementById("wa-submit").disabled=true;
+      document.getElementById("wa-submit").dataset.previewReady="false";
+      document.getElementById("order-preview").hidden=true;
+      document.getElementById("modal-back").hidden=true;
+      document.getElementById("modal-footnote").textContent=isConsult
+        ?"Ceritakan kebutuhanmu terlebih dahulu."
+        :"Pilih software terlebih dahulu.";
+
+      modalStep=1;
+      updateModalProgress();
+      showFormStep(1);
+
+      if(!isConsult){
+        document.querySelectorAll('input[name="softwareChoice"]').forEach(input=>input.addEventListener("change",handleSoftwareChange));
+        document.getElementById("software-other")?.addEventListener("input",()=>{updateSoftwareState();validateForm();});
+      }else{
+        document.getElementById("consult-need")?.addEventListener("input",validateForm);
+        document.getElementById("consult-known-software")?.addEventListener("input",validateForm);
+        document.querySelectorAll('input[name="consultPurpose"]').forEach(input=>input.addEventListener("change",validateForm));
+      }
+
+      setCtaLoading(trigger,false);
+      requestAnimationFrame(()=>{
+        const focusTarget=isConsult?document.getElementById("consult-need"):document.querySelector('input[name="softwareChoice"]');
+        focusTarget?.focus();
+      });
+      validateForm();
+    }
+
+    function buildConsultFields(){
+      const purposes=["Tugas sekolah/kuliah","Desain","Edit video","3D / Arsitektur","Coding","Lainnya"];
+      const purposeHTML=purposes.map((item,index)=>{
+        const id=`consult-purpose-${index}`;
+        return `<label class="software-check consult-purpose" for="${id}"><input id="${id}" name="consultPurpose" type="radio" value="${item}"><span>${item}</span></label>`;
+      }).join("");
+      return `<div class="consult-fields">
+        <div class="field full">
+          <label for="consult-need">Ceritakan kebutuhanmu</label>
+          <textarea id="consult-need" name="consultNeed" rows="5" required placeholder="Contoh: Saya siswa DKV dan perlu membuat poster serta video untuk tugas sekolah, tetapi belum tahu software yang paling cocok."></textarea>
+        </div>
+        <div class="field full">
+          <label>Untuk kebutuhan apa?</label>
+          <div class="software-check-grid consult-purpose-grid">${purposeHTML}</div>
+        </div>
+        <div class="field full">
+          <label for="consult-known-software">Software yang sudah kamu ketahui <span>(opsional)</span></label>
+          <input id="consult-known-software" name="knownSoftware" type="text" autocomplete="off" placeholder="Contoh: Photoshop, tapi belum yakin apakah itu yang dibutuhkan">
+        </div>
+      </div>`;
+    }
+
+    function closeOrderModal(){
+      const modal=document.getElementById("order-modal");
+      if(!modal||modal.hidden)return;
+      modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.classList.remove("modal-open");
+      setTimeout(()=>{if(!modal.classList.contains("is-open")){modal.hidden=true;if(lastModalTrigger&&typeof lastModalTrigger.focus==="function")lastModalTrigger.focus();}},230);
+    }
+
+    function isConsultMode(){
+      return document.getElementById("selected-package")?.value === "CONSULT";
+    }
+
+    function getSelectedSoftware(){
+      const checked=[...document.querySelectorAll('input[name="softwareChoice"]:checked')].map(input=>input.value);
+      const other=document.getElementById(isConsultMode()?"consult-known-software":"software-other")?.value.trim();
+      const result=checked.filter(value=>value!=="Software lainnya");
+      if(other) result.push(other);
+      return result;
+    }
+
+    function getConsultNeed(){
+      return document.getElementById("consult-need")?.value.trim() || "";
+    }
+
+    function getConsultPurpose(){
+      return document.querySelector('input[name="consultPurpose"]:checked')?.value || "";
+    }
+
+    function getSoftware(){
+      return getSelectedSoftware();
+    }
+
+    function updateSoftwareState(){
+      if(isConsultMode()) return;
+
+      const key=document.getElementById("selected-package").value;
+      const limit=getPackageLimit(key);
+      const choices=[...document.querySelectorAll('input[name="softwareChoice"]')];
+      const checked=choices.filter(input=>input.checked);
+      const count=checked.length;
+      const countEl=document.getElementById("software-count");
+      const note=document.getElementById("software-selection-note");
+      const otherWrap=document.getElementById("software-other-wrap");
+      const other=document.getElementById("software-other");
+
+      if(countEl){
+        countEl.textContent=`${count} dipilih`;
+        countEl.classList.toggle("is-complete",count>0);
+      }
+
+      if(otherWrap) otherWrap.hidden=!checked.some(input=>input.value==="Software lainnya");
+
+      if(note){
+        note.classList.remove("is-error","is-ready");
+        if(count===0){
+          note.textContent="Belum ada software dipilih.";
+        }else if(limit!==Infinity && count>=limit){
+          note.textContent=`${count} / ${limit} software dipilih · Batas paket tercapai.`;
+          note.classList.add("is-ready");
+        }else if(limit===Infinity){
+          note.textContent=`${count} software dipilih.`;
+        }else{
+          note.textContent=`${count} / ${limit} software dipilih.`;
+        }
+      }
+
+      choices.forEach(input=>{
+        input.disabled=!input.checked && limit!==Infinity && checked.length>=limit;
+      });
+
+      if(otherWrap?.hidden && other) other.value="";
+    }
+
+    function handleSoftwareChange(event){
+      if(isConsultMode()) return;
+      const key=document.getElementById("selected-package").value;
+      const limit=getPackageLimit(key);
+      const checked=[...document.querySelectorAll('input[name="softwareChoice"]:checked')];
+      if(limit!==Infinity && checked.length>limit){
+        event.target.checked=false;
+        showToast(`${key} maksimal ${limit} software.`);
+      }
+      updateSoftwareState();
+      validateForm();
+    }
+
+    function hasSoftwareSelection(){
+      if(isConsultMode()) return true;
+      const selected=[...document.querySelectorAll('input[name="softwareChoice"]:checked')];
+      const otherChecked=selected.some(input=>input.value==="Software lainnya");
+      const other=document.getElementById("software-other")?.value.trim();
+      return selected.length>0 && (!otherChecked || !!other);
+    }
+
+    function validateForm(){
+      const key=document.getElementById("selected-package").value;
+      const btn=document.getElementById("wa-submit");
+
+      if(isConsultMode()){
+        const needValid=!!getConsultNeed() && !!getConsultPurpose();
+        const dataValid=["order-name","order-class","order-major","order-laptop"].every(id=>document.getElementById(id)?.value.trim());
+        const valid=needValid && dataValid;
+        if(modalStep===1) btn.disabled=!needValid;
+        if(modalStep===2) btn.disabled=!dataValid;
+        return valid;
+      }
+
+      const limit=getPackageLimit(key);
+      const selected=[...document.querySelectorAll('input[name="softwareChoice"]:checked')];
+      const otherChecked=selected.some(input=>input.value==="Software lainnya");
+      const other=document.getElementById("software-other")?.value.trim();
+      const softwareValid=selected.length>0 && selected.length<=limit && (!otherChecked || !!other);
+      const dataValid=["order-name","order-class","order-major","order-laptop"].every(id=>document.getElementById(id)?.value.trim());
+      const valid=softwareValid && dataValid;
+      if(modalStep===1) btn.disabled=!softwareValid;
+      if(modalStep===2) btn.disabled=!dataValid;
+      return valid;
+    }
+
+    function escapeHTML(value){
+      return String(value ?? "").replace(/[&<>"]/g, char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[char]));
+    }
+
+    function buildPreview(){
+      const key=document.getElementById("selected-package").value;
+      const data=packages[key]||packages.CONSULT;
+      const software=getSoftware();
+
+      document.getElementById("preview-name").textContent=document.getElementById("order-name").value.trim();
+      document.getElementById("preview-class").textContent=document.getElementById("order-class").value.trim();
+      document.getElementById("preview-major").textContent=document.getElementById("order-major").value.trim();
+      document.getElementById("preview-laptop").textContent=document.getElementById("order-laptop").value.trim();
+      document.getElementById("preview-software-label").textContent=data.type==="consult"?"Software yang sudah diketahui":"Software";
+      document.getElementById("preview-software-list").innerHTML=software.length
+        ? software.map(item=>`<span class="preview-software-item">${escapeHTML(item)}</span>`).join("")
+        : `<span class="preview-empty">Belum ditentukan · akan dibantu saat konsultasi.</span>`;
+      document.getElementById("preview-package").textContent=data.type==="consult"?"Akan dibantu tentukan":`${key} — ${data.price}`;
+
+      const note=document.getElementById("order-note").value.trim();
+      const need=getConsultNeed();
+      const purpose=getConsultPurpose();
+      const noteRow=document.getElementById("preview-note-row");
+      const needRow=document.getElementById("preview-need-row");
+      const purposeRow=document.getElementById("preview-purpose-row");
+
+      document.getElementById("preview-note").textContent=note||"—";
+      noteRow.hidden=!note;
+      if(needRow){
+        document.getElementById("preview-need").textContent=need||"—";
+        needRow.hidden=!need;
+      }
+      if(purposeRow){
+        document.getElementById("preview-purpose").textContent=purpose||"—";
+        purposeRow.hidden=!purpose;
+      }
+    }
+
+    function buildMessage(){
+      const key=document.getElementById("selected-package").value;
+      const data=packages[key]||packages.CONSULT;
+      const name=document.getElementById("order-name").value.trim();
+      const kelas=document.getElementById("order-class").value.trim();
+      const jurusan=document.getElementById("order-major").value.trim();
+      const laptop=document.getElementById("order-laptop").value.trim();
+      const software=getSoftware();
+      const note=document.getElementById("order-note").value.trim();
+
+      if(data.type==="consult"){
+        return `Halo RAVIN, saya mau konsultasi soal instalasi/setup software.
+
+Nama: ${name}
+Kelas: ${kelas}
+Jurusan: ${jurusan}
+Laptop: ${laptop}
+
+Kebutuhan: ${getConsultPurpose()}
+Cerita kebutuhan:
+${getConsultNeed()}
+
+Software yang sudah saya ketahui:${software.length?`\n${software.map(item=>"• "+item).join("\n")}`:" Belum tahu / mohon dibantu menentukan."}${note?`\n\nCatatan: ${note}`:""}
+
+Saya belum yakin software atau paket yang paling sesuai. Mohon dibantu cek kebutuhan dan spesifikasinya.
+
+Terima kasih.`;
+      }
+
+      return `Halo RAVIN, saya mau pesan instalasi software.
+
+Nama: ${name}
+Kelas: ${kelas}
+Jurusan: ${jurusan}
+Laptop: ${laptop}
+
+Software yang dibutuhkan:
+${software.map(item=>"• "+item).join("\n")}
+
+Paket: ${key} — ${data.price}${note?`\nCatatan: ${note}`:""}
+
+Boleh dibantu cek apakah software ini bisa dipasang?
+
+Terima kasih.`;
+    }
+
+    document.querySelectorAll(".package-cta").forEach(btn=>btn.addEventListener("click",()=>openOrderModal(btn.dataset.package,btn)));
+    document.querySelectorAll('[data-wa="Chat Sekarang"],[data-wa="Chat & Konsultasi"],[data-wa="WhatsApp"],[data-wa="general"]').forEach(btn=>btn.addEventListener("click",e=>{
+      e.preventDefault();
+      openOrderModal("CONSULT",btn);
+    }));
+
+    document.getElementById("order-form").addEventListener("input",()=>{updateSoftwareState();validateForm();});
+    document.getElementById("order-form").addEventListener("change",validateForm);
+
+    document.getElementById("wa-submit").addEventListener("click",()=>{
+      const btn=document.getElementById("wa-submit");
+      if(modalStep===1){
+        if(!hasSoftwareSelection())return;
+        showFormStep(2);
+        requestAnimationFrame(()=>document.getElementById("order-name")?.focus());
+        return;
+      }
+      if(modalStep===2){
+        if(!validateForm())return;
+        buildPreview();
+        showFormStep(3);
+        return;
+      }
+
+      btn.disabled=true;btn.dataset.originalText=btn.textContent;btn.textContent="Membuka WhatsApp...";btn.classList.add("cta-loading");btn.setAttribute("aria-busy","true");
+      const opened=openWhatsApp(buildMessage());
+      setTimeout(()=>{
+        btn.disabled=false;btn.textContent=btn.dataset.originalText||"Buka WhatsApp →";btn.classList.remove("cta-loading");btn.removeAttribute("aria-busy");
+        if(opened)closeOrderModal();else showToast("WhatsApp tidak terbuka. Coba izinkan pop-up lalu tekan tombol lagi.");
+      },450);
+    });
+
+    document.getElementById("modal-back").addEventListener("click",()=>showFormStep(1));
+    document.getElementById("preview-edit").addEventListener("click",()=>showFormStep(2));
+    document.querySelectorAll("[data-close-modal]").forEach(el=>el.addEventListener("click",closeOrderModal));
+
+    const orderModal=document.getElementById("order-modal");
+    orderModal.addEventListener("click",e=>{if(e.target===orderModal)closeOrderModal()});
+    orderModal.addEventListener("keydown",e=>{
+      if(e.key!=="Tab")return;
+      const focusable=[...orderModal.querySelectorAll('button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [href], [tabindex]:not([tabindex="-1"])')].filter(el=>!el.hidden&&el.offsetParent!==null);
+      if(!focusable.length)return;
+      const first=focusable[0],last=focusable[focusable.length-1];
+      if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+      else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+    });
+    document.addEventListener("keydown",e=>{if(e.key==="Escape"&&orderModal.classList.contains("is-open"))closeOrderModal()});
+
+    const mobileCta=document.getElementById("mobile-cta"), hero=document.querySelector(".hero");
+    if(mobileCta){
+      const mo=new IntersectionObserver(entries=>mobileCta.classList.toggle("is-visible",!entries[0].isIntersecting),{threshold:.08});
+      if(hero)mo.observe(hero);
+    }
+  </script>
+
+<div class="mobile-cta" id="mobile-cta" aria-label="Pesan RAVIN Setup">
+  <div><small>Mulai Rp15K</small><strong>Ceritakan kebutuhanmu</strong></div>
+  <a href="#" data-wa="general">Mulai →</a>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
